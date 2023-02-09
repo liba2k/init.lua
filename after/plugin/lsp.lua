@@ -24,7 +24,7 @@ lsp.configure('ltex', {
         ltex = {
             language = "en-US",
             additionalRules = {
-            languageModel = "/Users/itail/n-gram"
+            languageModel = "/opt/n-gram"
             },
         },
     },
