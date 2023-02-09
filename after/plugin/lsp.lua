@@ -3,6 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
+  'ltex',
   'tsserver',
   'sumneko_lua',
   'rust_analyzer',
@@ -18,7 +19,16 @@ lsp.configure('sumneko_lua', {
         }
     }
 })
-
+lsp.configure('ltex', {
+    settings = {
+        ltex = {
+            language = "en-US",
+            additionalRules = {
+            languageModel = "/Users/itail/n-gram"
+            },
+        },
+    },
+})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
