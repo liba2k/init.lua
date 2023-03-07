@@ -69,5 +69,6 @@ return require('packer').startup(function(use)
       end
   })
   use({ 'ThePrimeagen/vim-be-good'})
+  use({'ludovicchabant/vim-gutentags'})
 end)
 

@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -22,10 +21,10 @@ end)
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -33,8 +32,8 @@ vim.keymap.set("n", "<Esc>", "<C-c>")
 
 
 vim.keymap.set("n", "Q", "1z=")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "F", vim.lsp.buf.format)
 
 
 vim.keymap.set("n", "<leader>h", "^")
@@ -51,8 +50,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
-vim.keymap.set("n", "<C-a>", ":w<cr>");
-vim.keymap.set("n", "<Leader>s", function()
-  vim.o.spell = not vim.o.spell
-  print("spell: " .. tostring(vim.o.spell))
+vim.keymap.set("n", "<C-s>", ":w<cr>");
+vim.keymap.set("n", "<leader>s", function()
+    vim.o.spell = not vim.o.spell
+    print("spell: " .. tostring(vim.o.spell))
 end)
