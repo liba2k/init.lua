@@ -5,12 +5,12 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'ltex',
   'tsserver',
-  'sumneko_lua',
   'rust_analyzer',
+  'pylsp'
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
+lsp.configure('lua-language-server', {
     settings = {
         Lua = {
             diagnostics = {
@@ -28,6 +28,15 @@ lsp.configure('ltex', {
             },
         },
     },
+})
+lsp.configure('pylsp', {
+    settings = {
+        pylsp = {
+			plugins = {
+				flake8 = { ignore = "E501" },
+			},
+		},
+    }
 })
 
 local cmp = require('cmp')

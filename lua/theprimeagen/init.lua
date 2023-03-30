@@ -1,6 +1,13 @@
 require("theprimeagen.packer")
 require("theprimeagen.set")
 require("theprimeagen.remap")
+require("theprimeagen.FormatJson")
+
+vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = { "*" },
+})
 
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})
@@ -23,11 +30,12 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
-})
+-- Removing trailing spaces makes noisy commits, I don't like it.
+-- autocmd({"BufWritePre"}, {
+--     group = ThePrimeagenGroup,
+--     pattern = "*",
+--     command = [[%s/\s\+$//e]],
+-- })
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0

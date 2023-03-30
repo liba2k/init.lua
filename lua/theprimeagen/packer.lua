@@ -51,7 +51,6 @@ return require('packer').startup(function(use)
   }
 
   use("folke/zen-mode.nvim")
-  use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use {
       'numToStr/Comment.nvim',
@@ -70,5 +69,10 @@ return require('packer').startup(function(use)
   })
   use({ 'ThePrimeagen/vim-be-good'})
   use({'ludovicchabant/vim-gutentags'})
+  use {'nvim-tree/nvim-web-devicons'}
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+  use {'nvim-tree/nvim-tree.lua'}
+  use {'michaeljsmith/vim-indent-object'}
+
 end)
 
