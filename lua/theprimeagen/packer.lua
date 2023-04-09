@@ -22,7 +22,8 @@ return require('packer').startup(function(use)
   })
   use({'EdenEast/nightfox.nvim', as = 'nightfox'})
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
+  use('nvim-treesitter/nvim-treesitter-context')
+  -- use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -73,6 +74,7 @@ return require('packer').startup(function(use)
   use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
   use {'nvim-tree/nvim-tree.lua'}
   use {'michaeljsmith/vim-indent-object'}
-
+  use {'mfussenegger/nvim-dap'}
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 end)
 

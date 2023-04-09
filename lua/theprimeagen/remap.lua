@@ -53,6 +53,7 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/the
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<C-s>", ":w<cr>");
+vim.keymap.set("n", "<A-t>", "<cmd>NvimTreeToggle<CR>")
 -- vim.keymap.set("n", "<leader>s", function()
 --     vim.o.spell = not vim.o.spell
 --     print("spell: " .. tostring(vim.o.spell))

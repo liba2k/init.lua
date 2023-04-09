@@ -10,7 +10,7 @@ lsp.ensure_installed({
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
@@ -33,7 +33,9 @@ lsp.configure('pylsp', {
     settings = {
         pylsp = {
 			plugins = {
-				flake8 = { ignore = "E501" },
+				pycodestyle = {
+                    ignore = {'E501'},
+                },
 			},
 		},
     }
